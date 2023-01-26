@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Locate a Loo</title>
-	
+	<title>Interesting around you</title>
+	 
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 <?php include "../header.php"; ?>
 
@@ -156,7 +156,7 @@ var mGreen = L.marker([position.coords.latitude,position.coords.longitude]).bind
 <br>
 <div class="list-group">
 
-<a class="btn btn-danger" href="" role="button" class="btn" data-toggle="">Loocate a Loo</a>
+<a class="btn btn-danger" href="" role="button" class="btn" data-toggle="">Interesting around you</a>
 </div>
 
 </body>
