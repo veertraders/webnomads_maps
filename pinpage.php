@@ -57,7 +57,6 @@
 	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19,attribution: '© OpenStreetMap'}).addTo(map);
 	map.setView([position.coords.latitude,position.coords.longitude], 13);
 	console.log(coord);
-	var mGreen = L.marker([position.coords.latitude,position.coords.longitude]).bindPopup('Your location').addTo(map);
 		
 link_feed="https://en.wikipedia.org/w/api.php?action=query&format=json&prop=coordinates|pageimages|info|description|extracts&generator=geosearch&colimit=500&inprop=url&exintro=1&ggscoord="+coord+"&ggsradius=10000&ggslimit=50&origin=*&piprop=thumbnail|name|original&pithumbsize=200";
 	console.log(link_feed);
@@ -84,7 +83,9 @@ console.log(obj["query"]["pages"][key]["thumbnail"]["source"]);
 var mGreen = L.marker([position.coords.latitude,position.coords.longitude]).bindPopup('Your location').addTo(map);
 //smarker_name="mark"+obj["query"]["pages"][key]["pageid"];
 
-marker_name = L.marker([obj["query"]["pages"][key]["coordinates"][0]['lat'],obj["query"]["pages"][key]["coordinates"][0]['lon']]).bindPopup(obj["query"]["pages"][key]["title"]).addTo(map);
+
+ L.marker([obj["query"]["pages"][key]["coordinates"][0]['lat'],obj["query"]["pages"][key]["coordinates"][0]['lon']]).bindPopup(obj["query"]["pages"][key]["title"]).addTo(map);
+
 
 //if loop is used as it is thumbnail is returned as an object and many times when it does not exists the loop stops . 
 }
